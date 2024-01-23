@@ -48,6 +48,10 @@ module.exports = {
       }
     },
   },
+  layers: {
+    components: true,
+    utilities: true,
+  },
   plugins: [
     require('tailwind-scrollbar-hide'),
   ],
