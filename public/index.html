@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platzi Travel</title>
+    <!-- ** Styles -->
+    <link rel="stylesheet" href="../public/css/tailwind.css">
+    <!-- ** Styles -->
+    <!-- ** Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- ** Fonts -->
+    <!-- ** Uicons -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <!-- ** Uicons -->
+</head>
+<body class="dark:bg-gray-900">
+    <main class="min-w-[300px]">
+        <header class="hidden lg:grid bg-primary w-screen dark:bg-gray-800">
+            <nav class="grid grid-cols-[140px_1fr_140px] px-10 items-center py-4">
+                <div><a href="#" class="font-Poppins text-xl font-bold text-white">Platzi Travel</a></div>
+
+                <div class="flex justify-center gap-24">
+                    <a href="" class="font-NunitoSans text-lg text-white">Locations</a>
+                    <a href="" class="font-NunitoSans text-lg text-white">Stays</a>
+                    <a href="" class="font-NunitoSans text-lg text-white">FAQS</a>
+                    <a href="" class="font-NunitoSans text-lg text-white">About Us</a>
+                </div>
+
+                <div class="flex gap-5">
+                    <button>
+                        <i class="fi fi-bs-search text-xl text-white flex items-center"></i>
+                    </button>
+                    <button id="btn-dark">
+                        <i class="fi fi-sr-moon text-xl text-white flex items-center dark:hidden"></i>
+                        <i class="fi fi-sr-sun text-xl text-white items-center hidden dark:flex"></i>
+                    </button>
+                    <a href="#">
+                        <i class="fi fi-sr-user text-xl text-white flex items-center"></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <div id="home" class="w-full h-screen bg-sanFrancisco bg-cover bg-no-repeat grid min-h-[345px] grid-rows-[40px_55px_1fr_110px] p-10 gap-[40px] max-h-[750px] bg-fixed lg:bg-sanFranciscoDesktop lg:max-h-850px lg:grid-cols-[420px] lg:grid-rows-[80px_80px] lg:gap-9 lg:pt-64 lg:pl-28">
+            <!-- desktop -->
+            <div class="hidden lg:block h-fit">
+                <h1 class="font-Poppins font-bold text-4xl">Find More Locations like this</h1>
+            </div>
+            <!-- desktop -->
+            <div class="grid justify-end h-[40px] lg:hidden">
+                <button class="w-[50px] h-[40px] bg-white dark:bg-gray-800 text-primary rounded-full hover:bg-gray-800 dark:hover:bg-white" id="btn-dark-ban">
+                    <i class="fi fi-sr-moon flex items-center justify-center dark:hidden"></i>
+                    <i class="fi fi-sr-sun items-center justify-center hidden dark:flex"></i>
+                </button>
+            </div>
+            <div class="w-full grid justify-items-center align-center grid-cols-1 lg:hidden" id="search_con">
+                <input type="search" name="search" id="search" placeholder="San Francisco" class="text-center w-[80%] rounded-full font-NunitoSans text-base outline-none p-5 shadow-sm transition-all duration-300 focus-within:shadow-sm focus:ring-2 focus:ring-primary focus:w-[95%] dark:bg-gray-800">
+            </div>
+            <div class="h-full lg:hidden"></div>
+            <div class="w-full grid grid-cols-1 justify-items-center h-fit lg:justify-items-start">
+                <button class="w-[75%] max-w-[190px] h-12 bg-white text-primary rounded-full font-Poppins font-bold transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:translate-y-1 hover:scale-110 dark:bg-gray-800">Explore More</button>
+            </div>
+        </div>
+        <section class="w-full grid grid-cols-[minmax(300px,1700px)] justify-center">
+            <div id="recommendations" class="p-6 grid xl:pb-12">
+                <p class="font-NunitoSans font-bold text-primary text-2xl lg:text-4xl">Our Recomendations</p>
+                <div class="flex gap-7 w-auto h-[270px] items-center overflow-x-auto overscroll-x-contain scrollbar-hide lg:mt-7">
+                    <div class="card bg-secondary dark:bg-gray-700">
+                        <div class="card__bg bg-norway"></div>
+                        <div class="card__info">
+                            <p class="text-white">Norway</p>
+                            <small class="text-white">Beautiful landscapes</small>
+                        </div>
+                    </div>
+                    <div class="card bg-white dark:bg-gray-700">
+                        <div class="card__bg bg-new_york"></div>
+                        <div class="card__info">
+                            <p class="text-terciary dark:text-white">New York</p>
+                            <small class="text-terciary dark:text-white">Concrete jungle</small>
+                        </div>
+                    </div>
+                    <div class="card bg-secondary dark:bg-gray-800">
+                        <div class="card__bg bg-yosemite"></div>
+                        <div class="card__info">
+                            <p class="text-white">Yosemite</p>
+                            <small class="text-white">A break from the world</small>
+                        </div>
+                    </div>
+                    <div class="card bg-white dark:bg-gray-700">
+                        <div class="card__bg bg-seattle"></div>
+                        <div class="card__info">
+                            <p class="text-terciary dark:text-white">Seattle</p>
+                            <small class="text-terciary dark:text-white">Big City</small>
+                        </div>
+                    </div>
+                    <div class="card bg-secondary dark:bg-gray-800">
+                        <div class="card__bg bg-switzerland"></div>
+                        <div class="card__info">
+                            <p class="text-white">Switzerland</p>
+                            <small class="text-white">Richness of its ecosystems</small>
+                        </div>
+                    </div>
+                    <div class="card bg-white dark:bg-gray-700">
+                        <div class="card__bg bg-medellin"></div>
+                        <div class="card__info">
+                            <p class="text-terciary dark:text-white">Medellín</p>
+                            <small class="text-terciary dark:text-white">the city of eternal spring</small>
+                        </div>
+                    </div>
+                    <div class="card bg-secondary dark:bg-gray-700">
+                        <div class="card__bg bg-europe bg-center"></div>
+                        <div class="card__info">
+                            <p class="text-white">Edinburgh</p>
+                            <small class="text-white">Castles and medieval times</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="famous__places" class="p-6 grid bg-slate-200 xl:grid xl:grid-cols-2 dark:bg-gray-800 rounded-2xl">
+                <div class="lg:pl-6">
+                    <p class="font-NunitoSans font-bold text-terciary text-2xl lg:text-4xl xl:mt-9">Trending Stays</p>
+                    <p class="hidden xl:block font-NunitoSans text-gray-600 text-2xl mt-6 pr-10 dark:text-gray-300">Lorem ipsum dolor sit amet <b>consectetur</b> adipisicing elit. Dicta officiis quibusdam dolorem <b>enim quis aperiam architecto</b>, sed soluta unde asperiores non explicabo distinctio rem dolor delectus. <b>Aperiam tempora a neque.</b></p>
+                </div>
+                <div class="flex flex-col items-center py-6 md:grid md:grid-cols-[minmax(100px,23rem)_minmax(100px,23rem)] justify-center gap-12 xl:gap-6">
+                    <div class="card__d">
+                        <div class="header__card_d bg-miami"></div>
+                        <div class="grid grid-cols-1 p-5">
+                            <p class="font-Poppins font-bold text-xl mb-2 ml-[4px] flex place-content-between">
+                                Miami 
+                                <span class="flex gap-2 text-primary">
+                                    <i class="fi fi-sr-bed-alt flex items-center mt-1"></i>
+                                    <i class="fi fi-sr-bed-alt flex items-center mt-1"></i>
+                                    <i class="fi fi-sr-swimmer flex items-center"></i>
+                                    <i class="fi fi-sr-sunset flex items-center"></i>
+                                </span>
+                            </p>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 ms-1 text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                            </div>
+                            <p class="ml-[4px] font-NunitoSans font-light text-sm none hidden">3 rooms, 2 bathrooms,  kitchen and amazing sea view.</p>
+                            <!-- <a href="#" class="bg-terciary no-underline py-2 grid text-center max-w-[120px] rounded-full w-full font-NunitoSans font-light ml-[4px]">Ver más</a> -->
+                        </div>
+                    </div>
+                    <div class="card__d">
+                        <div class="header__card_d bg-yosemite"></div>
+                        <div class="grid grid-cols-1 p-5">
+                            <p class="font-Poppins font-bold text-xl mb-2 ml-[4px] flex place-content-between">
+                                Yosemite 
+                                <span class="flex gap-2 text-primary">
+                                    <i class="fi fi-sr-bed-alt flex items-center mt-1"></i>
+                                    <i class="fi fi-sr-bed-alt flex items-center mt-1"></i>
+                                    <i class="fi fi-sr-sunset flex items-center"></i>
+                                </span>
+                            </p>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 ms-1 text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                            </div>
+                            <p class="ml-[4px] font-NunitoSans font-light text-sm none hidden">3 rooms, 2 bathrooms,  kitchen and amazing sea view.</p>
+                            <!-- <a href="#" class="bg-terciary no-underline py-2 grid text-center max-w-[120px] rounded-full w-full font-NunitoSans font-light ml-[4px]">Ver más</a> -->
+                        </div>
+                    </div>
+                    <div class="card__d">
+                        <div class="header__card_d bg-LA"></div>
+                        <div class="grid grid-cols-1 p-5">
+                            <p class="font-Poppins font-bold text-xl mb-2 ml-[4px] flex place-content-between">
+                                Los Angeles 
+                                <span class="flex gap-2 text-primary">
+                                    <i class="fi fi-sr-bed-alt flex items-center mt-1"></i>
+                                    <i class="fi fi-sr-bed-alt flex items-center mt-1"></i>
+                                    <i class="fi fi-sr-swimmer flex items-center"></i>
+                                    <i class="fi fi-sr-sunset flex items-center"></i>
+                                    <i class="fi fi-sr-oven flex items-center"></i>
+                                </span>
+                            </p>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                            </div>
+                            <p class="ml-[4px] font-NunitoSans font-light text-sm none hidden">3 rooms, 2 bathrooms,  kitchen and amazing sea view.</p>
+                            <!-- <a href="#" class="bg-terciary no-underline py-2 grid text-center max-w-[120px] rounded-full w-full font-NunitoSans font-light ml-[4px]">Ver más</a> -->
+                        </div>
+                    </div>
+                    <div class="card__d">
+                        <div class="header__card_d bg-bali"></div>
+                        <div class="grid grid-cols-1 p-5">
+                            <p class="font-Poppins font-bold text-xl mb-2 ml-[4px] flex place-content-between">
+                                Bali 
+                                <span class="flex gap-2 text-primary">
+                                    <i class="fi fi-sr-bed-alt flex items-center mt-1"></i>
+                                    <i class="fi fi-sr-bed-alt flex items-center mt-1"></i>
+                                    <i class="fi fi-sr-swimmer flex items-center"></i>
+                                    <i class="fi fi-sr-oven"></i>
+                                </span>
+                            </p>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 ms-1 text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                            </div>
+                            <p class="ml-[4px] font-NunitoSans font-light text-sm none hidden">3 rooms, 2 bathrooms,  kitchen and amazing sea view.</p>
+                            <!-- <a href="#" class="bg-terciary no-underline py-2 grid text-center max-w-[120px] rounded-full w-full font-NunitoSans font-light ml-[4px]">Ver más</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fqa" class="p-6 grid">
+                <p class="font-NunitoSans font-bold text-primary text-2xl mb-3">Questions? look here</p>
+                <div class="dark:text-white">
+                    <section class="px-3 py-5">
+                        <h4 class="font-NunitoSans font-bold text-xl mb-2">Payment Methods</h4>
+                        <p class="font-NunitoSans font-light">We accept VISA, MasterCard, American Express, Paypal and Binance, We accept VISA, MasterCard, American Express, Paypal and Binance.</p>
+                    </section>
+                    <section class="px-3 py-5">
+                        <h4 class="font-NunitoSans font-bold text-xl mb-2">Payment Methods</h4>
+                        <p class="font-NunitoSans font-light">We accept VISA, MasterCard, American Express, Paypal and Binance, We accept VISA, MasterCard, American Express, Paypal and Binance.</p>
+                    </section>
+                    <section class="px-3 py-5">
+                        <h4 class="font-NunitoSans font-bold text-xl mb-2">Payment Methods</h4>
+                        <p class="font-NunitoSans font-light">We accept VISA, MasterCard, American Express, Paypal and Binance, We accept VISA, MasterCard, American Express, Paypal and Binance.</p>
+                    </section>
+                    <section class="px-3 py-5">
+                        <h4 class="font-NunitoSans font-bold text-xl mb-2">Payment Methods</h4>
+                        <p class="font-NunitoSans font-light">We accept VISA, MasterCard, American Express, Paypal and Binance, We accept VISA, MasterCard, American Express, Paypal and Binance.</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <footer class="w-full bg-gray-100 px-7 pt-9 pb-24 lg:pb-9 lg:flex lg:justify-center lg:items-center lg:gap-9 dark:bg-gray-900">
+            <section class="mb-4 lg:mb-0">
+                <a class="no-underline text-gray-600 text-xl dark:text-gray-500" href="#">About Us</a>
+            </section>
+            <section>
+                <a href="#" class="no-underline text-gray-600 text-[1.1rem] font-Poppins dark:text-gray-500">Investors</a>
+            </section>
+            <section>
+                <a href="#" class="no-underline text-gray-600 text-[1.1rem] font-Poppins dark:text-gray-500">Jobs</a>
+            </section>
+            <section>
+                <a href="#" class="no-underline text-gray-600 text-[1.1rem] font-Poppins dark:text-gray-500">Privacy policy</a>
+            </section>
+            <section>
+                <a href="#" class="no-underline text-gray-600 text-[1.1rem] font-Poppins dark:text-gray-500">Terms and Conditions</a>
+            </section>
+            <section>
+                <a href="#" class="no-underline text-gray-600 text-[1.1rem] font-Poppins dark:text-gray-500">Platzi Travel, inc</a>
+            </section>
+            <section class="mt-4 lg:flex lg:mt-0 lg:gap-3">
+                <p class="text-gray-600 text-[1.1rem] font-Poppins">Follow Us </p>
+                <div class="mt-3 flex gap-4 lg:mt-0">
+                    <a href="#" class="text-2xl text-gray-700 dark:text-gray-600">
+                        <i class="fi fi-brands-twitter-alt-circle"></i>
+                    </a>
+                    <a href="#" class="text-2xl text-gray-700 dark:text-gray-600">
+                        <i class="fi fi-brands-instagram"></i>
+                    </a>
+                </div>
+            </section>
+        </footer>
+    </main>
+    <div class="tab_bar w-screen bg-white fixed left-0 bottom-0 shadow-md flex justify-center gap-11 py-3 lg:hidden dark:bg-gray-700">
+        <a href="#home">
+            <i class="fi fi-sr-house-chimney text-3xl text-gray-500 hover:text-primary"></i>
+        </a>
+        <a href="#search_con">
+            <i class="fi fi-bs-search text-3xl text-gray-500 hover:text-primary"></i>
+        </a>
+        <a href="#famous__places">
+            <i class="fi fi-sr-heart text-3xl text-gray-500 hover:text-primary"></i>
+        </a>
+        <button id="btn-dark-mb">
+            <i class="fi fi-sr-moon text-3xl text-gray-500 hover:text-primary dark:hidden"></i>
+            <i class="fi fi-sr-sun text-3xl text-gray-500 hover:text-primary hidden dark:flex"></i>
+        </button>
+        <a href="#">
+            <i class="fi fi-sr-user text-3xl text-gray-500 hover:text-primary"></i>
+        </a>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
